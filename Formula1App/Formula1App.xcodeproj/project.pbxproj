@@ -10,6 +10,7 @@
 		5C3629CE29C103F5000DC446 /* RacesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3629CD29C103F5000DC446 /* RacesModel.swift */; };
 		5C3629D029C104BC000DC446 /* PitstopsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3629CF29C104BC000DC446 /* PitstopsModel.swift */; };
 		5C5FC6B929C0F51500DDCBF1 /* new.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5FC6B829C0F51500DDCBF1 /* new.swift */; };
+		5CABF96E29C11054002FF7DE /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CABF96D29C11054002FF7DE /* Constant.swift */; };
 		5CD605AD29BE349B00537EE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD605AC29BE349B00537EE5 /* AppDelegate.swift */; };
 		5CD605AF29BE349B00537EE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD605AE29BE349B00537EE5 /* SceneDelegate.swift */; };
 		5CD605B429BE349B00537EE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CD605B229BE349B00537EE5 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 		5C3629CD29C103F5000DC446 /* RacesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacesModel.swift; sourceTree = "<group>"; };
 		5C3629CF29C104BC000DC446 /* PitstopsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitstopsModel.swift; sourceTree = "<group>"; };
 		5C5FC6B829C0F51500DDCBF1 /* new.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = new.swift; sourceTree = "<group>"; };
+		5CABF96D29C11054002FF7DE /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		5CD605A929BE349B00537EE5 /* Formula1App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Formula1App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CD605AC29BE349B00537EE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CD605AE29BE349B00537EE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 		5C5FC6B529C0E68800DDCBF1 /* Constant */ = {
 			isa = PBXGroup;
 			children = (
+				5CABF96D29C11054002FF7DE /* Constant.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				5CD605CC29BFC02300537EE5 /* TeamsModel.swift in Sources */,
 				5CD605CA29BF9C1900537EE5 /* DriversModel.swift in Sources */,
 				5CD605AF29BE349B00537EE5 /* SceneDelegate.swift in Sources */,
+				5CABF96E29C11054002FF7DE /* Constant.swift in Sources */,
 				5CD605D029BFC65B00537EE5 /* Webservice.swift in Sources */,
 				5C3629CE29C103F5000DC446 /* RacesModel.swift in Sources */,
 				5CD605C629BE3F5B00537EE5 /* CircuitsModel.swift in Sources */,
