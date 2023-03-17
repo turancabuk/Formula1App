@@ -85,8 +85,50 @@ final class MainViewModel {
             switch result {
             case .success(let response):
                 if let driversStrings = response.response {
-                    let drivers = driversStrings.map {Drivers(driversGet: nil, parameters: nil, results: nil, response: [$0]) }
+                    let drivers = driversStrings.map { Drivers(driversGet: nil, parameters: nil, results: nil, response: [$0]) }
                     self.driversList = drivers
+                }
+                completion(.success(response))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        })
+    }
+    func fetchRacesModel(completion: @escaping(Result<Races, Error>) -> Void) {
+        webservice.fetch(response: Races.self, with: .races, completion: { result in
+            switch result {
+            case .success(let response):
+                if let racesStrings = response.response {
+                    let races = racesStrings.map { Races(racesGet: nil, parameters: nil, results: nil, response: [$0]) }
+                    self.racesList = races
+                }
+                completion(.success(response))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        })
+    }
+    func fetcTeamsModel(completion: @escaping(Result<Teams, Error>) -> Void) {
+        webservice.fetch(response: Teams.self, with: .teams, completion: { result in
+            switch result {
+            case .success(let response):
+                if let teamsStrings = response.response {
+                    let teams = teamsStrings.map { Teams(teamsGet: nil, parameters: nil, results: nil, response: [$0]) }
+                    self.teamsList = teams
+                }
+                completion(.success(response))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        })
+    }
+    func fetchPitstopsModel(completion: @escaping(Result<Pitstops, Error>) -> Void) {
+        webservice.fetch(response: Pitstops.self, with: .pitstops, completion: { result in
+            switch result {
+            case .success(let response):
+                if let pitstopsStrings = response.response {
+                    let pitstops = pitstopsStrings.map { Pitstops(pitstopsGet: nil, parameters: nil, results: nil, response: [$0]) }
+                    self.pitstopsList = pitstops
                 }
                 completion(.success(response))
             case .failure(let error):

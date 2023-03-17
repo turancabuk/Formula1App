@@ -7,21 +7,20 @@
 import Foundation
 
 // MARK: - Pitstops
-struct Pitstops {
+struct Pitstops: Codable {
     let pitstopsGet: String?
     let parameters: PitstopsParameters?
-    let errors: [Any?]?
     let results: Int?
     let response: [PitstopsResponse]?
 }
 
 // MARK: - Parameters
-struct PitstopsParameters {
+struct PitstopsParameters: Codable {
     let race: String?
 }
 
 // MARK: - Response
-struct PitstopsResponse {
+struct PitstopsResponse: Codable {
     let race: Race?
     let driver: Driver?
     let team: Team?
@@ -30,7 +29,7 @@ struct PitstopsResponse {
 }
 
 // MARK: - Driver
-struct Driver {
+struct Driver: Codable {
     let id: Int?
     let name, abbr: String?
     let number: Int?
@@ -38,12 +37,12 @@ struct Driver {
 }
 
 // MARK: - Race
-struct Race {
+struct Race: Codable {
     let id: Int?
 }
 
 // MARK: - Team
-struct Team {
+struct Team: Codable {
     let id: Int?
     let name: String?
     let logo: String?

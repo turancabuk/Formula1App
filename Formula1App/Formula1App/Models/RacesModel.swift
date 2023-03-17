@@ -7,20 +7,31 @@
 import Foundation
 
 // MARK: - Races
-struct Races {
+struct Races: Codable {
     let racesGet: String?
     let parameters: RacesParameters?
     let results: Int?
     let response: [RacesResponse]?
+
+    enum CodingKeys: String, CodingKey {
+        case racesGet = "get"
+        case parameters, results, response
+    }
 }
 
 // MARK: - Parameters
-struct RacesParameters {
+struct RacesParameters: Codable {
     let competition, type, season: String?
+
+    enum CodingKeys: String, CodingKey {
+        case competition = "comp"
+        case type = "raceType"
+        case season
+    }
 }
 
 // MARK: - Response
-struct RacesResponse {
+struct RacesResponse: Codable {
     let id: Int?
     let competition: Competition?
     let circuit: Circuit?
@@ -29,43 +40,68 @@ struct RacesResponse {
     let laps: Laps?
     let fastestLap: FastestLap?
     let distance, timezone: String?
-    let date: Date?
-    let weather: NSNull?
     let status: String?
+
+    enum CodingKeys: String, CodingKey {
+        case id, competition, circuit, season, type, laps, fastestLap, distance, timezone, status
+    }
 }
 
 // MARK: - Circuit
-struct Circuit {
+struct Circuit: Codable {
     let id: Int?
     let name: String?
     let image: String?
+
+    enum CodingKeys: String, CodingKey {
+        case id, name, image
+    }
 }
 
 // MARK: - Competition
-struct Competition {
+struct Competition: Codable {
     let id: Int?
     let name: String?
     let location: Location?
+
+    enum CodingKeys: String, CodingKey {
+        case id, name, location
+    }
 }
 
 // MARK: - Location
-struct Location {
+struct Location: Codable {
     let country, city: String?
+
+    enum CodingKeys: String, CodingKey {
+        case country, city
+    }
 }
 
 // MARK: - FastestLap
-struct FastestLap {
+struct FastestLap: Codable {
     let driver: RacesDriver?
     let time: String?
+
+    enum CodingKeys: String, CodingKey {
+        case driver, time
+    }
 }
 
 // MARK: - Driver
-struct RacesDriver {
+struct RacesDriver: Codable {
     let id: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case id
+    }
 }
 
 // MARK: - Laps
-struct Laps {
-    let current: NSNull?
+struct Laps: Codable {
     let total: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case total = "totalLaps"
+    }
 }
