@@ -7,15 +7,19 @@
 import Foundation
 
 // MARK: - Circuits
-struct Circuits {
+struct Circuits: Codable {
     let circuitsGet: String?
-    let parameters, errors: [Any?]?
     let results: Int?
     let response: [CircuitsResponse]?
+    
+    enum CodingKeys: String, CodingKey {
+        case circuitsGet = "get"
+        case results, response
+    }
 }
 
 // MARK: - Response
-struct CircuitsResponse {
+struct CircuitsResponse: Codable {
     let id: Int?
     let name: String?
     let image: String?
@@ -25,22 +29,31 @@ struct CircuitsResponse {
     let lapRecord: LapRecord?
     let capacity, opened: Int?
     let owner: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case id, name, image, competition
+        case firstGrandPrix = "first_grand_prix"
+        case laps, length
+        case raceDistance = "race_distance"
+        case lapRecord = "lap_record"
+        case capacity, opened, owner
+    }
 }
 
 // MARK: - Competition
-struct CircuitsCompetition {
+struct CircuitsCompetition: Codable {
     let id: Int?
     let name: String?
     let location: CircuitsLocation?
 }
 
 // MARK: - Location
-struct CircuitsLocation {
+struct CircuitsLocation: Codable {
     let country: String?
     let city: String?
 }
 
 // MARK: - LapRecord
-struct LapRecord {
+struct LapRecord: Codable {
     let time, driver, year: String?
 }

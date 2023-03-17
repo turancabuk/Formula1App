@@ -7,10 +7,8 @@
 import Foundation
 
 // MARK: - Seasons
-struct Seasons {
+struct Seasons: Codable {
     let seasonsGet: String?
-    let parameters, errors: [Any?]?
     let results: Int?
     let response: [Int]?
 }
-

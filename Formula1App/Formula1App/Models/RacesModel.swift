@@ -10,7 +10,6 @@ import Foundation
 struct Races {
     let racesGet: String?
     let parameters: RacesParameters?
-    let errors: [Any?]?
     let results: Int?
     let response: [RacesResponse]?
 }

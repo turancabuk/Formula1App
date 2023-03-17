@@ -7,27 +7,48 @@
 import Foundation
 
 // MARK: - Competitions
-struct Competitions {
+struct Competitions: Codable {
     let competitionsGet: String?
     let parameters: CompetitionsParameters?
-    let errors: [Any?]?
     let results: Int?
     let response: [CompetitionsResponse]?
+    
+    enum CodingKeys: String, CodingKey {
+        case competitionsGet = "CompetitionsGet"
+        case parameters = "Parameters"
+        case results = "Results"
+        case response = "Response"
+    }
 }
 
 // MARK: - Parameters
-struct CompetitionsParameters {
+struct CompetitionsParameters: Codable {
     let id: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case id = "ID"
+    }
 }
 
 // MARK: - Response
-struct CompetitionsResponse {
+struct CompetitionsResponse: Codable {
     let id: Int?
     let name: String?
     let location: CompetitionsLocation?
+    
+    enum CodingKeys: String, CodingKey {
+        case id = "ID"
+        case name = "Name"
+        case location = "Location"
+    }
 }
 
 // MARK: - Location
-struct CompetitionsLocation {
+struct CompetitionsLocation: Codable {
     let country, city: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case country = "Country"
+        case city = "City"
+    }
 }

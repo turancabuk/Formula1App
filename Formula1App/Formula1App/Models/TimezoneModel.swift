@@ -7,9 +7,8 @@
 import Foundation
 
 // MARK: - Timezone
-struct Timezone {
+struct Timezone: Codable {
     let timezoneGet: String?
-    let parameters, errors: [Any?]?
     let results: Int?
     let response: [String]?
 }
