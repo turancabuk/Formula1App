@@ -101,13 +101,6 @@
 			path = Constant;
 			sourceTree = "<group>";
 		};
-		5C5FC6B629C0E6AF00DDCBF1 /* Screens */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Screens;
-			sourceTree = "<group>";
-		};
 		5C5FC6B729C0E74000DDCBF1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,7 +135,6 @@
 				5CD605C029BE397F00537EE5 /* Models */,
 				5CD605CE29BFC64700537EE5 /* Webservice */,
 				5C5FC6B429C0E5FF00DDCBF1 /* Extensions */,
-				5C5FC6B629C0E6AF00DDCBF1 /* Screens */,
 				5C5FC6B329C0E5DC00DDCBF1 /* Storyboards */,
 				5C5FC6B729C0E74000DDCBF1 /* Resources */,
 				5CD605BA29BE349C00537EE5 /* Info.plist */,
