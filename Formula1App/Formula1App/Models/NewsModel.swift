@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - NewsElement
-struct NewsElement: Codable {
+struct NewsModel: Codable {
     let title: String?
     let url: String?
     let source: String?
