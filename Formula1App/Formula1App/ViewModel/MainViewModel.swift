@@ -23,6 +23,7 @@ final class MainViewModel {
     var racesList = [Races]()
     var teamsList = [Teams]()
     var pitstopsList = [Pitstops]()
+    var newsList = [NewsElement]()
     
     func fetchTimezoneModel(completion: @escaping(Result<Timezone, Error>) -> Void) {
         webservice.fetch(response: Timezone.self, with: .timezone, completion: { result in
@@ -136,6 +137,32 @@ final class MainViewModel {
             }
         })
     }
+
+    func fetchNewsModel(completion: @escaping(Result<[NewsElement], Error>) -> Void) {
+        webservice.fetch(response: [NewsElement].self, with: .news, completion: { result in
+            switch result {
+            case .success(let response):
+                self.newsList = response
+                completion(.success(response))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        })
+    }
+//    func fetchNewsModel(completion: @escaping(Result<NewsElement, Error>) -> Void) {
+//        webservice.fetch(response: NewsElement.self, with: .news, completion: { result in
+//            switch result {
+//            case .success(let response):
+//                if let newsStrings = response.url {
+//                    let news = newsStrings.compactMap { NewsElement(identifier: $0) }
+//                    self.newsList = news
+//                }
+//                completion(.success(response))
+//            case .failure(let error):
+//                completion(.failure(error))
+//            }
+//        })
+//    }
 }
 
 
