@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NewsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class NewsViewController: UIViewController {
 
     @IBOutlet weak var NewsTableView: UITableView!
     
@@ -16,32 +16,37 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NewsTableView.delegate = self
-        NewsTableView.dataSource = self
+//        NewsTableView.delegate = self
+//        NewsTableView.dataSource = self
 
-        viewModel = MainViewModel()
+        let webservice = MainWebservice()
+        viewModel = MainViewModel(webservice: webservice)
         
-        guard let viewModel = viewModel else {return}
-        viewModel.fetchNewsModel {_ in
-            DispatchQueue.main.async {
-                self.NewsTableView.reloadData()
-            }
-        }
+//        viewModel.fetchNewsModel { [weak self] result in
+//            switch result {
+//            case .success:
+//                DispatchQueue.main.async {
+//                    self?.NewsTableView.reloadData()
+//                }
+//            case .failure(let error):
+//                print("Haberler indirilemedi: \(error.localizedDescription)")
+//            }
+//        }
     }
-
 }
+
 extension NewsViewController {
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell: NewsTableViewCell = (NewsTableView.dequeueReusableCell(withIdentifier: "cellIdentifier") as? NewsTableViewCell)!
-        let article = viewModel.newsList[indexPath.row]
-        cell.configureCell(Model: article)
-        return cell
-
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        viewModel.newsList.count
-    }
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//
+//        let cell: NewsTableViewCell = (NewsTableView.dequeueReusableCell(withIdentifier: "cellIdentifier") as? NewsTableViewCell)!
+//        let article = viewModel.newsList[indexPath.row]
+//        cell.configureCell(Model: article)
+//        return cell
+//
+//    }
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//
+//        viewModel.newsList.count
+//    }
 }

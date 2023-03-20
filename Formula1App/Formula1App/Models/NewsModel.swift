@@ -8,14 +8,15 @@
 import Foundation
 
 // MARK: - NewsElement
-struct NewsModel: Codable {
+struct NewsModel {
     let title: String?
     let url: String?
     let source: String?
     
-    enum CodingKeys: CodingKey {
+    enum CodingKeys: String, CodingKey {
         case title
         case url
         case source
     }
 }
+

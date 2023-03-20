@@ -10,10 +10,16 @@
 		5C3199BB29C118A5009557BC /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3199BA29C118A5009557BC /* MainViewModel.swift */; };
 		5C3629CE29C103F5000DC446 /* RacesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3629CD29C103F5000DC446 /* RacesModel.swift */; };
 		5C3629D029C104BC000DC446 /* PitstopsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3629CF29C104BC000DC446 /* PitstopsModel.swift */; };
+		5C8CDD9A29C8D712002046F5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8CDD9929C8D712002046F5 /* MainViewController.swift */; };
+		5C8CDD9D29C8D744002046F5 /* TeamsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8CDD9C29C8D744002046F5 /* TeamsCollectionViewCell.swift */; };
+		5C8CDD9F29C8D75C002046F5 /* PilotsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8CDD9E29C8D75C002046F5 /* PilotsCollectionViewCell.swift */; };
+		5C8CDDA229C8D77A002046F5 /* CircuitsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8CDDA129C8D77A002046F5 /* CircuitsCollectionViewCell.swift */; };
 		5CABF96E29C11054002FF7DE /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CABF96D29C11054002FF7DE /* Constant.swift */; };
 		5CBEE53029C61DB300404440 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBEE52F29C61DB300404440 /* NewsModel.swift */; };
 		5CBEE53729C629D900404440 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBEE53629C629D900404440 /* NewsTableViewCell.swift */; };
 		5CBEE53929C630DD00404440 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBEE53829C630DD00404440 /* NewsViewController.swift */; };
+		5CC77C3529C767A800BBF5FF /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC77C3429C767A800BBF5FF /* TeamsViewController.swift */; };
+		5CC77C3729C767C300BBF5FF /* TeamsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC77C3629C767C300BBF5FF /* TeamsViewCell.swift */; };
 		5CD605AD29BE349B00537EE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD605AC29BE349B00537EE5 /* AppDelegate.swift */; };
 		5CD605AF29BE349B00537EE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD605AE29BE349B00537EE5 /* SceneDelegate.swift */; };
 		5CD605B429BE349B00537EE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CD605B229BE349B00537EE5 /* Main.storyboard */; };
@@ -32,10 +38,16 @@
 		5C3199BA29C118A5009557BC /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		5C3629CD29C103F5000DC446 /* RacesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacesModel.swift; sourceTree = "<group>"; };
 		5C3629CF29C104BC000DC446 /* PitstopsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitstopsModel.swift; sourceTree = "<group>"; };
+		5C8CDD9929C8D712002046F5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5C8CDD9C29C8D744002046F5 /* TeamsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsCollectionViewCell.swift; sourceTree = "<group>"; };
+		5C8CDD9E29C8D75C002046F5 /* PilotsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilotsCollectionViewCell.swift; sourceTree = "<group>"; };
+		5C8CDDA129C8D77A002046F5 /* CircuitsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitsCollectionViewCell.swift; sourceTree = "<group>"; };
 		5CABF96D29C11054002FF7DE /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		5CBEE52F29C61DB300404440 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		5CBEE53629C629D900404440 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		5CBEE53829C630DD00404440 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		5CC77C3429C767A800BBF5FF /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
+		5CC77C3629C767C300BBF5FF /* TeamsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewCell.swift; sourceTree = "<group>"; };
 		5CD605A929BE349B00537EE5 /* Formula1App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Formula1App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CD605AC29BE349B00537EE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CD605AE29BE349B00537EE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +86,10 @@
 		5C5ABA8629C3888700A7EE0B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5C8CDD9829C8D6F1002046F5 /* Main */,
+				5C8CDD9729C8D6D9002046F5 /* Circuits */,
+				5C8CDD9629C8D614002046F5 /* Pilots */,
+				5CC77C3329C7678500BBF5FF /* Teams */,
 				5CBEE53329C6299C00404440 /* News */,
 			);
 			path = Controllers;
@@ -111,6 +127,39 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		5C8CDD9629C8D614002046F5 /* Pilots */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pilots;
+			sourceTree = "<group>";
+		};
+		5C8CDD9729C8D6D9002046F5 /* Circuits */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Circuits;
+			sourceTree = "<group>";
+		};
+		5C8CDD9829C8D6F1002046F5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5C8CDD9929C8D712002046F5 /* MainViewController.swift */,
+				5C8CDD9B29C8D71F002046F5 /* CollectionViews */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5C8CDD9B29C8D71F002046F5 /* CollectionViews */ = {
+			isa = PBXGroup;
+			children = (
+				5C8CDD9C29C8D744002046F5 /* TeamsCollectionViewCell.swift */,
+				5C8CDD9E29C8D75C002046F5 /* PilotsCollectionViewCell.swift */,
+				5C8CDDA129C8D77A002046F5 /* CircuitsCollectionViewCell.swift */,
+			);
+			path = CollectionViews;
+			sourceTree = "<group>";
+		};
 		5CBEE53329C6299C00404440 /* News */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +167,15 @@
 				5CBEE53629C629D900404440 /* NewsTableViewCell.swift */,
 			);
 			path = News;
+			sourceTree = "<group>";
+		};
+		5CC77C3329C7678500BBF5FF /* Teams */ = {
+			isa = PBXGroup;
+			children = (
+				5CC77C3429C767A800BBF5FF /* TeamsViewController.swift */,
+				5CC77C3629C767C300BBF5FF /* TeamsViewCell.swift */,
+			);
+			path = Teams;
 			sourceTree = "<group>";
 		};
 		5CD605A029BE349A00537EE5 = {
@@ -156,6 +214,7 @@
 		5CD605C029BE397F00537EE5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5CBEE52F29C61DB300404440 /* NewsModel.swift */,
 				5CD605C129BE399300537EE5 /* TimezoneModel.swift */,
 				5CD605C329BE3C8600537EE5 /* SeasonsModel.swift */,
 				5CD605C529BE3F5B00537EE5 /* CircuitsModel.swift */,
@@ -164,7 +223,6 @@
 				5C3629CD29C103F5000DC446 /* RacesModel.swift */,
 				5CD605CB29BFC02300537EE5 /* TeamsModel.swift */,
 				5C3629CF29C104BC000DC446 /* PitstopsModel.swift */,
-				5CBEE52F29C61DB300404440 /* NewsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -258,12 +316,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CD605AD29BE349B00537EE5 /* AppDelegate.swift in Sources */,
+				5C8CDD9F29C8D75C002046F5 /* PilotsCollectionViewCell.swift in Sources */,
 				5C3629D029C104BC000DC446 /* PitstopsModel.swift in Sources */,
 				5CBEE53729C629D900404440 /* NewsTableViewCell.swift in Sources */,
 				5CD605C229BE399300537EE5 /* TimezoneModel.swift in Sources */,
 				5CD605C829BE474C00537EE5 /* CompetitionsModel.swift in Sources */,
+				5C8CDD9A29C8D712002046F5 /* MainViewController.swift in Sources */,
+				5CC77C3529C767A800BBF5FF /* TeamsViewController.swift in Sources */,
+				5C8CDDA229C8D77A002046F5 /* CircuitsCollectionViewCell.swift in Sources */,
 				5CD605C429BE3C8600537EE5 /* SeasonsModel.swift in Sources */,
 				5CD605CC29BFC02300537EE5 /* TeamsModel.swift in Sources */,
+				5C8CDD9D29C8D744002046F5 /* TeamsCollectionViewCell.swift in Sources */,
 				5C3199BB29C118A5009557BC /* MainViewModel.swift in Sources */,
 				5CD605CA29BF9C1900537EE5 /* DriversModel.swift in Sources */,
 				5CBEE53029C61DB300404440 /* NewsModel.swift in Sources */,
@@ -273,6 +336,7 @@
 				5C3629CE29C103F5000DC446 /* RacesModel.swift in Sources */,
 				5CD605C629BE3F5B00537EE5 /* CircuitsModel.swift in Sources */,
 				5CBEE53929C630DD00404440 /* NewsViewController.swift in Sources */,
+				5CC77C3729C767C300BBF5FF /* TeamsViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,7 +15,7 @@ final class MainViewModel {
         self.webservice = webservice
     }
     
-    var timezoneList = [TimeZone]()
+    var timezoneList = [String]()
     var seasonsList = [Seasons]()
     var circuitsList = [Circuits]()
     var competitionsList = [Competitions]()
@@ -23,22 +23,34 @@ final class MainViewModel {
     var racesList = [Races]()
     var teamsList = [Teams]()
     var pitstopsList = [Pitstops]()
-    var newsList = [NewsModel]()
+    var newsList: NewsModel?
+
     
     func fetchTimezoneModel(completion: @escaping(Result<Timezone, Error>) -> Void) {
         webservice.fetch(response: Timezone.self, with: .timezone, completion: { result in
             switch result {
             case .success(let response):
-                if let timeZoneStrings = response.response {
-                    let timeZones = timeZoneStrings.compactMap { TimeZone(identifier: $0) }
-                    self.timezoneList = timeZones
-                }
+                self.timezoneList = response.timezoneResponse ?? []
                 completion(.success(response))
             case .failure(let error):
                 completion(.failure(error))
             }
         })
     }
+    //    func fetchTimezoneModel(completion: @escaping(Result<Timezone, Error>) -> Void) {
+//        webservice.fetch(response: Timezone.self, with: .timezone, completion: { result in
+//            switch result {
+//            case .success(let response):
+//                if let timeZoneStrings = response.response {
+//                    let timeZones = timeZoneStrings.compactMap { TimeZone(identifier: $0) }
+//                    self.timezoneList = timeZones
+//                }
+//                completion(.success(response))
+//            case .failure(let error):
+//                completion(.failure(error))
+//            }
+//        })
+//    }
     func fetchSeasonsModel(completion: @escaping(Result<Seasons, Error>) -> Void) {
         webservice.fetch(response: Seasons.self, with: .seasons, completion: { result in
             switch result {
@@ -131,18 +143,6 @@ final class MainViewModel {
                     let pitstops = pitstopsStrings.map { Pitstops(pitstopsGet: nil, parameters: nil, results: nil, response: [$0]) }
                     self.pitstopsList = pitstops
                 }
-                completion(.success(response))
-            case .failure(let error):
-                completion(.failure(error))
-            }
-        })
-    }
-
-    func fetchNewsModel(completion: @escaping(Result<[NewsModel], Error>) -> Void) {
-        webservice.fetch(response: [NewsModel].self, with: .news, completion: { result in
-            switch result {
-            case .success(let response):
-                self.newsList = response
                 completion(.success(response))
             case .failure(let error):
                 completion(.failure(error))
