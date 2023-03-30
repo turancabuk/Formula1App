@@ -145,10 +145,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fcu-N0-4Tc" userLabel="Team Col View">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fcu-N0-4Tc" userLabel="Team Col View">
                                 <rect key="frame" x="16" y="584" width="361" height="130"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="361" id="4dM-c5-Dg5"/>
+                                    <constraint firstAttribute="height" constant="130" id="Jqa-I6-m6b"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QMb-pZ-dE2">
                                     <size key="itemSize" width="153" height="124"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -156,7 +159,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="uuc-Xq-cDM" userLabel="TeamCollectionView" customClass="TeamsCollectionViewCell" customModule="Formula1App" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TeamsCollectionViewID" id="uuc-Xq-cDM" userLabel="TeamCollectionView" customClass="TeamsCollectionViewCell" customModule="Formula1App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="2.6666666666666665" width="150" height="125"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Jwg-Tm-pw0">
@@ -190,104 +193,18 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tzw-pN-Fwz" userLabel="Pilot Coll View">
-                                <rect key="frame" x="16" y="206" width="361" height="130"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PmS-l8-Xmw">
-                                    <size key="itemSize" width="153" height="124"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="fpr-5p-Mgy" userLabel="PilotCollectionViewCell" customClass="PilotsCollectionViewCell" customModule="Formula1App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="2.6666666666666665" width="150" height="125"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Upz-UY-DvO">
-                                            <rect key="frame" x="0.0" y="0.0" width="150" height="125"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1KK-6j-L2s">
-                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpi-eR-7RB">
-                                                    <rect key="frame" x="0.0" y="89" width="150" height="36"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <attributedString key="attributedText">
-                                                        <fragment content="Team Name">
-                                                            <attributes>
-                                                                <font key="NSFont" size="13" name="DINAlternate-Bold"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="150" height="125"/>
-                                        <connections>
-                                            <outlet property="PilotsImageView" destination="1KK-6j-L2s" id="ZGc-ix-5EE"/>
-                                            <outlet property="PilotsNameLabel" destination="wpi-eR-7RB" id="fNv-SK-kaf"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zjP-S7-cw4" userLabel="Circuit Col View">
-                                <rect key="frame" x="16" y="391" width="361" height="130"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="b5K-o9-dLA">
-                                    <size key="itemSize" width="153" height="124"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="nPe-4H-dxG" userLabel="CircuitCollectionViewCell" customClass="CircuitsCollectionViewCell" customModule="Formula1App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="2.6666666666666665" width="150" height="125"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cgE-ew-PEc">
-                                            <rect key="frame" x="0.0" y="0.0" width="150" height="125"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ktp-zT-y1y" userLabel="Circuits Image View">
-                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fti-xK-5vE" userLabel="Circuits Name Label">
-                                                    <rect key="frame" x="0.0" y="89" width="150" height="36"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <attributedString key="attributedText">
-                                                        <fragment content="Pilot Name">
-                                                            <attributes>
-                                                                <font key="NSFont" size="13" name="DINAlternate-Bold"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="150" height="125"/>
-                                        <connections>
-                                            <outlet property="CircuitsImageView" destination="ktp-zT-y1y" id="oie-cH-31X"/>
-                                            <outlet property="CircuitsNameLabel" destination="fti-xK-5vE" id="QJS-Da-cmm"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="usS-5H-0uF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fcu-N0-4Tc" firstAttribute="leading" secondItem="usS-5H-0uF" secondAttribute="leading" constant="16" id="28g-tO-6oT"/>
+                            <constraint firstItem="fcu-N0-4Tc" firstAttribute="top" secondItem="usS-5H-0uF" secondAttribute="top" constant="481" id="5I9-LE-loR"/>
+                            <constraint firstItem="usS-5H-0uF" firstAttribute="bottom" secondItem="fcu-N0-4Tc" secondAttribute="bottom" constant="55" id="WPJ-Nl-Sss"/>
+                            <constraint firstItem="usS-5H-0uF" firstAttribute="trailing" secondItem="fcu-N0-4Tc" secondAttribute="trailing" constant="16" id="ao8-f7-cFU"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iVp-kt-3iI"/>
                     <connections>
-                        <outlet property="CircuitsCollectionView" destination="zjP-S7-cw4" id="xxQ-YB-Ks3"/>
-                        <outlet property="PilotsCollectionView" destination="tzw-pN-Fwz" id="Og7-5F-ZCS"/>
                         <outlet property="TeamsCollectionView" destination="fcu-N0-4Tc" id="dwh-75-zKM"/>
                     </connections>
                 </viewController>

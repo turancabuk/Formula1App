@@ -86,11 +86,14 @@ final class MainViewModel {
             switch result {
             case .success(let teams):
                 self?.teamsList = teams
+                print("Teams fetched successfully: \(teams)")
             case .failure(let error):
                 print("Error fetching teams: \(error)")
             }
+            print("Teams list: \(self?.teamsList ?? [])")
         }
     }
+
     func fetchPitstops() {
         webservice.fetch(response: [Pitstops].self, with: .pitstops) { [weak self] result in
             switch result {
