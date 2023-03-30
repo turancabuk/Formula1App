@@ -10,6 +10,10 @@ import Foundation
 struct Timezone: Codable {
     let timezoneGet: String?
     let timezoneResults: Int?
-    let timezoneResponse: [String]?
+    let timezoneResponse: [TimezoneItem]?
 
+}
+struct TimezoneItem: Codable {
+    let name: String
+    let utcOffset: Int
 }

@@ -33,7 +33,7 @@ struct RacesParameters: Codable {
 // MARK: - Response
 struct RacesResponse: Codable {
     let id: Int?
-    let competition: Competition?
+    let competition: RacesCompetition?
     let circuit: Circuit?
     let season: Int?
     let type: String?
@@ -59,7 +59,7 @@ struct Circuit: Codable {
 }
 
 // MARK: - Competition
-struct Competition: Codable {
+struct RacesCompetition: Codable {
     let id: Int?
     let name: String?
     let location: Location?

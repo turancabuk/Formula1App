@@ -286,9 +286,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="iVp-kt-3iI"/>
                     <connections>
-                        <outlet property="CircuitsCollectionView" destination="nPe-4H-dxG" id="x0W-IW-9Rl"/>
-                        <outlet property="PilotsCollectionView" destination="fpr-5p-Mgy" id="pn0-rU-1Eb"/>
-                        <outlet property="TeamsCollectionView" destination="uuc-Xq-cDM" id="2QX-Qk-rqu"/>
+                        <outlet property="CircuitsCollectionView" destination="zjP-S7-cw4" id="xxQ-YB-Ks3"/>
+                        <outlet property="PilotsCollectionView" destination="tzw-pN-Fwz" id="Og7-5F-ZCS"/>
+                        <outlet property="TeamsCollectionView" destination="fcu-N0-4Tc" id="dwh-75-zKM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2HC-xB-pq4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

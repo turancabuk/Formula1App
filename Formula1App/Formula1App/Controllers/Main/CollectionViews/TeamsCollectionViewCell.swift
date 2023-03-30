@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class TeamsCollectionViewCell: UICollectionViewCell {
     
@@ -13,8 +14,10 @@ class TeamsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var TeamsNameLabel: UILabel!
     
     public func configureCell(model: TeamsResponse) {
-        
         self.TeamsNameLabel.text = model.name
+        DispatchQueue.main.async {
+            self.TeamsImageView.kf.setImage(with: URL(string: model.logo ?? ""))
+        }
         
     }
     

@@ -6,17 +6,18 @@
 ////
 
 import Foundation
+import UIKit
 
-enum FormulaAPICall {
-    private static let timezoneURL = "https://api-formula-1.p.rapidapi.com/timezone"
-    private static let seasonsURL = "https://api-formula-1.p.rapidapi.com/seasons"
-    private static let circuitsURL = "https://api-formula-1.p.rapidapi.com/circuits?id="
-    private static let competitionsURL = "https://api-formula-1.p.rapidapi.com/competitions?id="
-    private static let driversURL = "https://api-formula-1.p.rapidapi.com/drivers?search="
-    private static let racesURL = "https://api-formula-1.p.rapidapi.com/races?competition=23&type=race&season="
-    private static let teamsURL = "https://api-formula-1.p.rapidapi.com/teams?id="
-    private static let pitstopsURL = "https://api-formula-1.p.rapidapi.com/pitstops?race="
-    private static let newsURL = "https://f1-latest-news.p.rapidapi.com/news"
+enum FormulaAPICall: String {
+    public static let timezoneURL = "https://api-formula-1.p.rapidapi.com/timezone"
+    public static let seasonsURL = "https://api-formula-1.p.rapidapi.com/seasons"
+    public static let circuitsURL = "https://api-formula-1.p.rapidapi.com/circuits?id="
+    public static let competitionsURL = "https://api-formula-1.p.rapidapi.com/competitions?id="
+    public static let driversURL = "https://api-formula-1.p.rapidapi.com/drivers?search="
+    public static let racesURL = "https://api-formula-1.p.rapidapi.com/races?competition=23&type=race&season="
+    public static let teamsURL = "https://api-formula-1.p.rapidapi.com/teams?id="
+    public static let pitstopsURL = "https://api-formula-1.p.rapidapi.com/pitstops?race="
+    public static let newsURL = "https://f1-latest-news.p.rapidapi.com/news"
 
     case timezone
     case seasons
@@ -28,31 +29,26 @@ enum FormulaAPICall {
     case pitstops
     case news
 
-    var urlString: String {
+    var url: URL {
         switch self {
         case .timezone:
-            return "\(FormulaAPICall.timezoneURL)"
+            return URL(string: FormulaAPICall.timezoneURL)!
         case .seasons:
-            return "\(FormulaAPICall.seasonsURL)"
+            return URL(string: FormulaAPICall.seasonsURL)!
         case .circuits:
-            return "\(FormulaAPICall.circuitsURL)"
+            return URL(string: FormulaAPICall.circuitsURL)!
         case .competitions:
-            return "\(FormulaAPICall.competitionsURL)"
+            return URL(string: FormulaAPICall.competitionsURL)!
         case .drivers:
-            return "\(FormulaAPICall.driversURL)"
+            return URL(string: FormulaAPICall.driversURL)!
         case .races:
-            return "\(FormulaAPICall.racesURL)"
+            return URL(string: FormulaAPICall.racesURL)!
         case .teams:
-            return "\(FormulaAPICall.teamsURL)"
+            return URL(string: FormulaAPICall.teamsURL)!
         case .pitstops:
-            return "\(FormulaAPICall.pitstopsURL)"
+            return URL(string: FormulaAPICall.pitstopsURL)!
         case .news:
-            return "\(FormulaAPICall.newsURL)"
+            return URL(string: FormulaAPICall.newsURL)!
         }
     }
-    var url: URL {
-        return URL(string: urlString)!
-    }
 }
-
-

@@ -9,10 +9,9 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    @IBOutlet weak var TeamsCollectionView: TeamsCollectionViewCell!
-    @IBOutlet weak var PilotsCollectionView: PilotsCollectionViewCell!
-    @IBOutlet weak var CircuitsCollectionView: CircuitsCollectionViewCell!
-    
+    @IBOutlet weak var TeamsCollectionView: UICollectionView!
+    @IBOutlet weak var PilotsCollectionView: UICollectionView!
+    @IBOutlet weak var CircuitsCollectionView: UICollectionView!
     
 
     override func viewDidLoad() {
@@ -20,7 +19,4 @@ class MainViewController: UIViewController {
 
 
     }
-    
-
-
 }
