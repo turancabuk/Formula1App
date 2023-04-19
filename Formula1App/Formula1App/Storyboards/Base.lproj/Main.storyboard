@@ -149,8 +149,8 @@
                                 <rect key="frame" x="16" y="584" width="361" height="130"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="361" id="4dM-c5-Dg5"/>
-                                    <constraint firstAttribute="height" constant="130" id="Jqa-I6-m6b"/>
+                                    <constraint firstAttribute="height" constant="130" id="2HZ-m8-z06"/>
+                                    <constraint firstAttribute="width" constant="361" id="5wH-it-IjH"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QMb-pZ-dE2">
                                     <size key="itemSize" width="153" height="124"/>
@@ -187,8 +187,57 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="150" height="125"/>
                                         <connections>
-                                            <outlet property="TeamsImageView" destination="Afn-KL-QmO" id="84b-hc-nm2"/>
-                                            <outlet property="TeamsNameLabel" destination="K1K-hd-N6s" id="ypP-GQ-c3G"/>
+                                            <outlet property="TeamsImageView" destination="Afn-KL-QmO" id="8ap-1d-bwt"/>
+                                            <outlet property="TeamsNameLabel" destination="K1K-hd-N6s" id="rQE-FQ-ruw"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sJS-fv-Qu4" userLabel="Circuits Col View">
+                                <rect key="frame" x="16" y="380" width="361" height="130"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="361" id="7qs-1P-DxI"/>
+                                    <constraint firstAttribute="height" constant="130" id="Q4w-Rl-XJe"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Nkl-9R-DgQ">
+                                    <size key="itemSize" width="153" height="124"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CircuitsCollectionViewID" id="zaj-EY-6kb" userLabel="CircuitsCollectionView" customClass="CircuitsCollectionViewCell" customModule="Formula1App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="2.6666666666666665" width="150" height="125"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="YF1-rS-qD1">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="125"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RwM-e9-4yW">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="90"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gb-W3-pz0" userLabel="Teams Name">
+                                                    <rect key="frame" x="0.0" y="89" width="150" height="36"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Circuits Name">
+                                                            <attributes>
+                                                                <font key="NSFont" size="13" name="DINAlternate-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="150" height="125"/>
+                                        <connections>
+                                            <outlet property="CircuitsImageView" destination="RwM-e9-4yW" id="CxP-EK-t3F"/>
+                                            <outlet property="CircuitsNameLabel" destination="0gb-W3-pz0" id="Wb8-Y3-oDt"/>
+                                            <outlet property="TeamsNameLabel" destination="0gb-W3-pz0" id="nKB-13-dfZ"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -197,10 +246,13 @@
                         <viewLayoutGuide key="safeArea" id="usS-5H-0uF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fcu-N0-4Tc" firstAttribute="leading" secondItem="usS-5H-0uF" secondAttribute="leading" constant="16" id="28g-tO-6oT"/>
-                            <constraint firstItem="fcu-N0-4Tc" firstAttribute="top" secondItem="usS-5H-0uF" secondAttribute="top" constant="481" id="5I9-LE-loR"/>
-                            <constraint firstItem="usS-5H-0uF" firstAttribute="bottom" secondItem="fcu-N0-4Tc" secondAttribute="bottom" constant="55" id="WPJ-Nl-Sss"/>
-                            <constraint firstItem="usS-5H-0uF" firstAttribute="trailing" secondItem="fcu-N0-4Tc" secondAttribute="trailing" constant="16" id="ao8-f7-cFU"/>
+                            <constraint firstItem="usS-5H-0uF" firstAttribute="trailing" secondItem="fcu-N0-4Tc" secondAttribute="trailing" constant="16" id="3N8-UT-9so"/>
+                            <constraint firstItem="usS-5H-0uF" firstAttribute="bottom" secondItem="fcu-N0-4Tc" secondAttribute="bottom" constant="55" id="3U1-P0-VY5"/>
+                            <constraint firstItem="fcu-N0-4Tc" firstAttribute="top" secondItem="sJS-fv-Qu4" secondAttribute="bottom" constant="74" id="Akb-E6-8sy"/>
+                            <constraint firstItem="sJS-fv-Qu4" firstAttribute="leading" secondItem="usS-5H-0uF" secondAttribute="leading" constant="16" id="Imc-dv-3Q6"/>
+                            <constraint firstItem="sJS-fv-Qu4" firstAttribute="top" secondItem="usS-5H-0uF" secondAttribute="top" constant="277" id="Ogd-9z-Whm"/>
+                            <constraint firstItem="fcu-N0-4Tc" firstAttribute="leading" secondItem="usS-5H-0uF" secondAttribute="leading" constant="16" id="STw-vH-QOp"/>
+                            <constraint firstItem="usS-5H-0uF" firstAttribute="trailing" secondItem="sJS-fv-Qu4" secondAttribute="trailing" constant="16" id="xB6-4I-aH9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iVp-kt-3iI"/>

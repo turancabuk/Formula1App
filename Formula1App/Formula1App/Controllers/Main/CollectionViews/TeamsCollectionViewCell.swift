@@ -18,7 +18,5 @@ class TeamsCollectionViewCell: UICollectionViewCell {
         DispatchQueue.main.async {
             self.TeamsImageView.kf.setImage(with: URL(string: model.logo ?? ""))
         }
-        
     }
-    
 }

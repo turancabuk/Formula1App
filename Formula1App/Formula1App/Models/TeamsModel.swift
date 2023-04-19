@@ -6,55 +6,65 @@
 ////
 import Foundation
 
-// MARK: - Teams
+
+
 struct Teams: Codable {
-    let teamsGet: String?
-    let parameters: TeamsParameters?
+    let get: String?
     let results: Int?
-    let response: [TeamsResponse]?
-    
-    enum CodingKeys: String, CodingKey {
-        case teamsGet = "get"
-        case parameters, results, response
-    }
-
+    let response: [String: TeamsResponse]?
 }
 
-// MARK: - Parameters
-struct TeamsParameters: Codable {
-    let id: String?
-    
-    enum CodingKeys: String, CodingKey {
-        case id
-    }
-}
-
-// MARK: - Response
 struct TeamsResponse: Codable {
-    let id: Int?
+    let id: String?
     let name: String?
     let logo: String?
     let base: String?
-    let firstTeamEntry, worldChampionships: Int?
-    let highestRaceFinish: HighestRaceFinish?
-    let polePositions, fastestLaps: Int?
-    let president, director, technicalManager, chassis: String?
-    let engine, tyres: String?
-    
+    let firstEntry: Int?
+    let championships: Int?
+    let polePositions: Int?
+    let fastestLaps: Int?
+    let president: String?
+    let director: String?
+    let technicalManager: String?
+    let chassis: String?
+    let engine: String?
+    let tyres: String?
+
     enum CodingKeys: String, CodingKey {
-        case id, name, logo, base, firstTeamEntry, worldChampionships, highestRaceFinish, polePositions, fastestLaps, president, director, technicalManager, chassis, engine, tyres
+        case id, name, logo, base, firstEntry = "firstEntryYear", championships = "worldChampionships", polePositions, fastestLaps, president, director, technicalManager, chassis, engine, tyres
     }
-
-}
-
-// MARK: - HighestRaceFinish
-struct HighestRaceFinish: Codable {
-    let position, number: Int?
-    
-    enum CodingKeys: String, CodingKey {
-        case position, number
-    }
-
 }
 
 
+//// MARK: - Teams
+//struct Teams: Codable {
+//    let teamsGet: String?
+//    let results: Int?
+//    let response: [String : TeamsResponse]?
+//
+//    enum CodingKeys: String, CodingKey {
+//        case teamsGet = "get"
+//        case results, response
+//    }
+//}
+//
+//struct TeamsResponse: Codable {
+//    let id: Int?
+//    let name: String?
+//    let logo: String?
+//    let base: String?
+//    let firstTeamEntry: Int?
+//    let worldChampionships: Int?
+//    let polePositions: Int?
+//    let fastestLaps: Int?
+//    let president: String?
+//    let director: String?
+//    let technicalManager: String?
+//    let chassis: String?
+//    let engine: String?
+//    let tyres: String?
+//
+//    enum CodingKeys: String, CodingKey {
+//        case id, name, logo, base, firstTeamEntry, worldChampionships, polePositions, fastestLaps, president, director, technicalManager, chassis, engine, tyres
+//    }
+//}

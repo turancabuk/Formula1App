@@ -8,15 +8,15 @@
 import UIKit
 import Kingfisher
 
-class CircuitsCollectionViewCell: UICollectionViewCell {
-    
-    @IBOutlet weak var CircuitsImageView: UIImageView!
-    @IBOutlet weak var CircuitsNameLabel: UILabel!
-    
-    public func ConfigureCell(model: CircuitsResponse) {
-        
-        CircuitsNameLabel.text = model.name
-        CircuitsImageView.kf.setImage(with: URL(string: model.image ?? ""))
-    }
-    
-}
+//class CircuitsCollectionViewCell: UICollectionViewCell {
+//    
+//    @IBOutlet weak var CircuitsImageView: UIImageView!
+//    @IBOutlet weak var CircuitsNameLabel: UILabel!
+//    
+//    public func ConfigureCell(model: CircuitsResponse) {
+//        
+//        CircuitsNameLabel.text = model.name
+//        CircuitsImageView.kf.setImage(with: URL(string: model.image ?? ""))
+//    }
+//    
+//}
