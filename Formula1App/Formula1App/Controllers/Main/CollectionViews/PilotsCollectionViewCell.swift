@@ -10,13 +10,9 @@ import Kingfisher
 
 class PilotsCollectionViewCell: UICollectionViewCell {
     
+    // ImageViews
     @IBOutlet weak var PilotsImageView: UIImageView!
     @IBOutlet weak var PilotsNameLabel: UILabel!
 
-
-        PilotsNameLabel.text = model.name
-        DispatchQueue.main.async {
-            self.PilotsImageView.kf.setImage(with: URL(string: model.imageName ?? ""))
-        }
     }
 }
