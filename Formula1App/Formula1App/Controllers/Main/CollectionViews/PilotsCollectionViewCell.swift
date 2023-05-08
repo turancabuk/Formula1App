@@ -10,7 +10,7 @@ import Kingfisher
 
 class PilotsCollectionViewCell: UICollectionViewCell {
     
-    // ImageViews
+    
     @IBOutlet weak var PilotsImageView: UIImageView!
     @IBOutlet weak var PilotsNameLabel: UILabel!
 
